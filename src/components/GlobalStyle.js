@@ -22,11 +22,20 @@ button{
     background:transparent;
     color:white;
     transition:all 0.5s ease;
+    
+    &:focus{
+        outline:none;
+    }
+    
     &:hover{
         background-color:#23d997;
-        color:white
-        
+        color:white 
     }
+
+    &:active{
+        transform:scale(.90)
+    }
+
 
 
 }
