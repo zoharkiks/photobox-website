@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
  *{
     margin:0;
     padding:0;
@@ -10,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
  body{
 background: #1b1b1b;
+font-family:'Inter', san-serif;
 
  }
 
@@ -22,6 +24,7 @@ button{
     background:transparent;
     color:white;
     transition:all 0.5s ease;
+    font-family:'Inter', san-serif;
     
     &:focus{
         outline:none;
@@ -51,6 +54,7 @@ button{
 
     h4{
         font-weight:bold;
+        font-size:1.5rem
         
     }
 
