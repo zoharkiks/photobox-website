@@ -2,6 +2,7 @@ import React from "react"
 
 // Global Styles
 import GlobalStyle from "./components/GlobalStyle"
+import Nav from "./components/Nav";
 
 
 // Import Pages
@@ -11,7 +12,9 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle/>
+      <Nav/>
       <AboutUs/>
+
     </div>
   );
 }
