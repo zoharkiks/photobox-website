@@ -1,43 +1,52 @@
 import React from "react";
 
+// Routes
+import {Link} from 'react-router-dom'
+
 // Import Images
 import aboutUs1 from "../img/frame-aboutUs.jpg";
 
 // Styled
-import styled from "styled-components"
-import {About, Description, Image, Hide} from "../styles.js"
+import { About, Description, Image, Hide } from "../styles.js";
+
+// Framer Motion
+import { motion } from "framer-motion";
+import { titleAnim,fade, photoAim } from "../animation";
+import Wave from './Wave'
 
 const AboutSection = () => {
+ 
+
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div
+          
+        >
           <Hide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               your <span>photos</span> live
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>forever</h2>
+            <motion.h2 variants={titleAnim}>forever</motion.h2>
           </Hide>
-        </div>
-        <p>
+        </motion.div>
+        <motion.p variants={fade}>
           Contact us for framing your photographs in various designs and shapes.
           All frames are handmade by professionals.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <Link to="/contact"> <motion.button variants={fade}>Contact Us</motion.button></Link>
       </Description>
       <Image>
-        <img src={aboutUs1} alt="frame" />
+        <motion.img variants={photoAim} src={aboutUs1} alt="frame" />
       </Image>
+      <Wave/>
     </About>
   );
 };
-
-// Styled Component
-
 
 export default AboutSection;

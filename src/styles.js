@@ -7,13 +7,13 @@ align-items:center;
 justify-content:center;
 padding:5rem 7rem;
 color:white;
-
 `;
 
 export const Description = styled.div`
 flex:1;
 overflow:hidden;
 padding-right:8rem;
+z-index:2;
 
 h2{
   font-weight:lighter;
@@ -22,6 +22,7 @@ h2{
 
 export const Image = styled.div`
 flex:1;
+z-index:2;
 img{
   width:100%;
   height:80vh;
